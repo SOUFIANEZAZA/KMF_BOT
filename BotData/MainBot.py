@@ -14,10 +14,10 @@ from BotData.ConfiG import *
 #Men@c
 bot = Bot(
     max_likes_per_day=400,
-    max_follows_per_day=300,
-    max_unfollows_per_day=300,
+    max_follows_per_day=240,
+    max_unfollows_per_day=240,
     max_messages_per_day=100,
-    max_comments_per_day=150,
+    max_comments_per_day=100,
     min_likes_to_like=10,
     max_likes_to_like=10000000,
     like_delay=30,
@@ -27,12 +27,7 @@ bot = Bot(
     )
 #hashtag list to tag in a media
 hashtagList = [
-            '#love #instagood #me #cute #tbt #photooftheday #instamood #iphonesia #tweegram #picoftheday #igers #girl #beautiful #instadaily #summer #instagramhub #iphoneonly #follow #igdaily #bestoftheday #happy #picstitch #tagblender #jj#sky #nofilter #fashion #followme #fun #su',
-            '#followme #follow #followforfollow #followback #followers #follow4follow #followher #follower #followhim #followall #followbackteam #followbackalways #follows #followgram #followalways #tagblender #followmefollowyou #following #followstagram #follownow #ifollowback #followus #f4f#ifollo#followyou',
-            '#like4like #liking #likeall #likeforlike #likes4likes #love#instagood #tagblender #tagblender #likesforlikes #ilikeback #liketeam #liker#ilike #likealways #likebackteam #ilikeyou #ilikeit #likeme #tflers #likes #likesback #photooftheday #likesforlike #iliketurtles #likes4followers #likemebac #ilu #likesreturned #l4l',
-            '#followforfollow #picture #italy #art #fashion #pink #blackandwhite #work #f4f #hot #fashionblogger #nyc #makeup #music #luxury #healthy #amazing #funny #happy #Home #inspiration #followme #like4like #fitfam #model #photooftheday #igers #instapic #USA #follow4follow #tattoo #Halloween #swag',
-            '#TagsForLikes #blogger #nice #night #autumn #bodybuilding #bestoftheday #red #instagram #likeforlike #beauty #dog #happiness #hair #foodporn #picoftheday #sky #flowers #Repost #instadaily #style #girl #instagood #vsco #goals #black #TBT #lifestyle #outfit #beach #wanderlust #Family #Selfie',
-            '#like4like #liking #likeall #likeforlike #likes4likes #love #instagood #tagblender #tagblender #likesforlikes #ilikeback #liketeam #liker #ilike #likealways #likebackteam #ilikeyou #ilikeit #likeme #tflers #likes #likesback #photooftheday'
+            '#casablanca'
 ]
 
 #Program For Unfollow Everyone
@@ -98,7 +93,7 @@ def ig_masslooker():
                 # If something went wrong - sleep long and start again
                 bot.logger.info(e)
                 current_user_id = user_to_get_likers_of
-                time.sleep(240 * random.random() + 60)
+                time.sleep(240 * random.random() + 30)
 
         except KeyboardInterrupt:
             break
@@ -171,7 +166,7 @@ def ig_inshackle():
     while True:
         try:
             bot.follow_users(user_ids=USERID_FOR_INSHACKLE)
-            countdown(counter_time=600)
+            countdown(counter_time=1800)
             bot.unfollow_users(user_ids=USERID_FOR_INSHACKLE)
             print("\u001b[33;1m-------------------------------------------------------\u001b[0m")
             countdown(120)
@@ -210,13 +205,13 @@ def ig_directmessage():
     print("\u001b[33;1m-------------------------------------------------------\u001b[0m")
     while True:
         try:
-            USER = bot.get_hashtag_users(hashtag="mallu")
+            USER = bot.get_hashtag_users(hashtag="CASABLANCA")
             USER_IDD = random.choice(USER)
             NAME = bot.get_username_from_user_id(USER_IDD)
             FULL_TEXT = ("Hi "+NAME+", "+INUsrp_TEXT)
             bot.send_profile(profile_user_id=bot.user_id,user_ids=USER_IDD,text=FULL_TEXT)
             bot.logger.info("Message Sented to "+ NAME)
-            countdown(300)
+            countdown(900)
         except KeyboardInterrupt:
             break
             clear()
