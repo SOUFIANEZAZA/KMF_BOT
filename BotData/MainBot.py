@@ -88,7 +88,7 @@ def ig_masslooker():
                     bot.logger.info("Total stories viewed: %d" % bot.total["stories_viewed"])
 
                 # CHOOSE RANDOM LIKER TO GRAB HIS LIKERS AND REPEAT
-                countdown(60)
+                countdown(30)
             except Exception as e:
                 # If something went wrong - sleep long and start again
                 bot.logger.info(e)
@@ -211,7 +211,7 @@ def ig_directmessage():
             FULL_TEXT = ("Hi "+NAME+", "+INUsrp_TEXT)
             bot.send_profile(profile_user_id=bot.user_id,user_ids=USER_IDD,text=FULL_TEXT)
             bot.logger.info("Message Sented to "+ NAME)
-            countdown(1800)
+            countdown(1500)
         except KeyboardInterrupt:
             break
             clear()
