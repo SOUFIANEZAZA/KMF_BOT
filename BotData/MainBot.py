@@ -211,7 +211,7 @@ def ig_directmessage():
             FULL_TEXT = ("Hi "+NAME+", "+INUsrp_TEXT)
             bot.send_profile(profile_user_id=bot.user_id,user_ids=USER_IDD,text=FULL_TEXT)
             bot.logger.info("Message Sented to "+ NAME)
-            countdown(900)
+            countdown(1800)
         except KeyboardInterrupt:
             break
             clear()
