@@ -23,14 +23,14 @@ USERID_FOR_MASSLOOKER = [
     ]
 
 USERID_FOR_INSHACKLE = [
-"instagram",
-    "katyperry",
-    "mileycyrus",
-    "nike",
-    "khloekardashian",
-    "nickiminaj",
-    "jlo",
-    "taylorswift",
-    "kendalljenner",
-    "neymarjr",
+"chouftv_official",
+    "hespress",
+    "welovebuzzar",
+    "kawtarbamo",
+    "rajaabelmir",
+    "reda_elwahabii",
+    "omarbelmir",
+    "adiltaouil",
+    "meryemasouab",
+    "manalbenchlikha",
     ]
