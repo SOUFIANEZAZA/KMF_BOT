@@ -19,7 +19,7 @@ USERID_FOR_MASSLOOKER = [
     "douziofficial",
     "allalirachid",
     "aminuxamine",
-    "hatimammor"
+    "hatimammor",
     ]
 
 USERID_FOR_INSHACKLE = [
